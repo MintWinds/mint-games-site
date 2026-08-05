@@ -1,0 +1,36 @@
+ :root.dark {
+    --background-colour: rgb(45, 44, 44);
+    --text-colour: #18e699;
+    --header-colour: rgb(31, 31, 31);
+ }
+
+ :root.light {
+    --background-colour: white;
+    --text-colour: #10540e;
+    --header-colour: rgb(172, 170, 170);
+ }
+ 
+ body {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-colour);
+    min-height: 100vh;
+    align-items: center;
+    margin: 0;
+
+ }
+
+ .header {
+   flex: 0 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-self: stretch;
+   gap: 50px;
+   height: 100px;
+   background-color: var(--header-colour);
+
+ }
+
+ h1 {
+    color: var(--text-colour);
+ }
