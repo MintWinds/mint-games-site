@@ -11,9 +11,7 @@
     --header-colour: rgb(31, 31, 31);
     --button-colour: rgb(45, 44, 44);
     --button-border: 2px solid rgb(71, 70, 70);
-    --background-image: 0 0 / 1500px 1500px url("./assets/gaming-pattern-dark.svg");
-    --block-2-colour: rgb(54, 54, 54);
-    --block-2-background: url(./assets/block2-background-dark.png);
+
 
  }
 
@@ -24,16 +22,13 @@
     --header-colour: rgb(172, 170, 170);
     --button-colour : rgb(227, 227, 227);
     --button-border: 2px solid rgb(165, 163, 163);
-    --background-image: 0 0 / 1500px 1500px url("./assets/gaming-pattern-light.svg");
-    --block-2-colour: rgb(211, 209, 209); 
-    --block-2-background: url(./assets/block2-background-light.png);
  }
 
  @font-face {
    font-family: "silkscreen";
    src:
-      url("assets/fonts/silkscreen/Silkscreen.woff") format("woff"),
-      url("assets/fonts/silkscreen/Silkscreen.woff2") format("woff2");
+      url("../assets/fonts/silkscreen/Silkscreen.woff") format("woff"),
+      url("../assets/fonts/silkscreen/Silkscreen.woff2") format("woff2");
    font-weight: normal;
    font-style: normal;
    font-display: swap;
@@ -42,8 +37,8 @@
   @font-face {
    font-family: "silkscreen";
    src:
-      url("assets/fonts/silkscreen/Silkscreen-Bold.woff") format("woff"),
-      url("assets/fonts/silkscreen/Silkscreen-Bold.woff2") format("woff2");
+      url("../assets/fonts/silkscreen/Silkscreen-Bold.woff") format("woff"),
+      url("../assets/fonts/silkscreen/Silkscreen-Bold.woff2") format("woff2");
    font-weight: bold;
    font-style: normal;
    font-display: swap;
