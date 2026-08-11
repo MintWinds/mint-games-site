@@ -1,7 +1,7 @@
  :root {
    --header-item-width: calc(100vw/3);
    --header-height: 100px;
-   --block-height: 500px;
+   --block-height: calc(20vw + 25vh);
  }
  
  :root.dark {
@@ -12,17 +12,21 @@
     --button-colour: rgb(45, 44, 44);
     --button-border: 2px solid rgb(71, 70, 70);
     --background-image: 0 0 / 1500px 1500px url("./assets/gaming-pattern-dark.svg");
+    --block-2-colour: rgb(54, 54, 54);
+    --block-2-background: url(./assets/block2-background-dark.png);
 
  }
 
  :root.light {
     --background-colour: white;
     --text-colour: #10540e;
-    --text-colour-2: #1a3211;
+    --text-colour-2: #305d1f;
     --header-colour: rgb(172, 170, 170);
     --button-colour : rgb(227, 227, 227);
     --button-border: 2px solid rgb(165, 163, 163);
     --background-image: 0 0 / 1500px 1500px url("./assets/gaming-pattern-light.svg");
+    --block-2-colour: rgb(211, 209, 209); 
+    --block-2-background: url(./assets/block2-background-light.png);
  }
 
  @font-face {
@@ -55,13 +59,7 @@
     color: var(--text-colour);
 
  }
-
- .header-space {
-   flex: 0 0 auto;
-   align-self: stretch;
-   height: var(--header-height);
- }
-
+ 
  .header {
    position: fixed;
    display: flex;
@@ -69,6 +67,7 @@
    align-items: center;
    height: var(--header-height);
    background-color: var(--header-colour);
+   z-index: 100;
 
  }
 
@@ -115,25 +114,74 @@
    border: var(--button-border);
  }
 
- .image-text {
+ .block1 {
   display: flex;
   flex: 0 0 1;
   align-self: stretch;
   background: var(--background-image);
-  height: var(--block-height);
+  height: calc(var(--block-height) + 100px);
   justify-content: center;
   align-items: center;
-  font-family: "Pixelify Sans";
-  font-size: 8rem;
+  font-family: "Pixelify Sans",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1rem, 6.5vw, 10rem);
   color: var(--text-colour-2);
   font-weight: 700;
+  box-sizing: border-box;
+  padding-top: var(--header-height);
  }
 
- .image-text div{
+ .block1 div{
   box-shadow: 0 0 70px 50px var(--text-colour-2);
   backdrop-filter: blur(70px);
   border-radius: 30px;
   
+ }
+
+ .block2 {
+  display: flex;
+  flex: 0 0 auto;
+  align-self: stretch;
+  height: calc(var(--block-height) + 200px);
+ }
+
+ .text-area {
+  display: flex;
+  flex: 1.5;
+  background-color: var(--block-2-colour);
+  color: var(--text-colour-2);
+  font-family: "Pixelify Sans",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1rem, 6vw, 10rem);
+  justify-content: center;
+  align-items: center;
+ }
+
+ .text-area-text {
+  text-align: center;
+ }
+ .background-image {
+  background-image: var(--block-2-background);
+  background-position: center;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ svg {
+  fill: var(--text-colour-2);
+  height: 30vw;
+  width: 30vw;
+ }
+
+ .footer {
+  flex: 0 0 auto;
+  display: flex;
+  height: 80px;
+  background-color: var(--header-colour);
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  font-family: "silkscreen" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  }
 
 
