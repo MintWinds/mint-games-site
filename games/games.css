@@ -130,6 +130,8 @@
     background-color: var(--header-colour);
     color: var(--text-colour-2);
     overflow: auto;
+    grid-auto-rows: var(--game-height);
+    gap: 15px;
  }
 
  .footer {
