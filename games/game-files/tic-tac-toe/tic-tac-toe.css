@@ -5,7 +5,8 @@
     --header-colour: rgb(31, 31, 31);
     --button-colour: rgb(45, 44, 44);
     --button-border: 2px solid rgb(71, 70, 70);
-    --select-colour: #4dffbe;
+    --cross: url(./tic-tac-toe-assets/cross-dark.svg);
+    --cross-alt: url(./tic-tac-toe-assets/cross-light.svg);
 
 
  }
@@ -17,7 +18,8 @@
     --header-colour: rgb(172, 170, 170);
     --button-colour : rgb(227, 227, 227);
     --button-border: 2px solid rgb(165, 163, 163);
-    --select-colour: #1a9d16;
+    --cross: url(./tic-tac-toe-assets/cross-light.svg);
+    --cross-alt: url(./tic-tac-toe-assets/cross-dark.svg);
  }
 
   @font-face {
@@ -58,7 +60,7 @@
     border: 5px solid var(--text-colour);
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-    position: fixed;
+    position: relative;
  }
 
  .scoreboard {
@@ -77,4 +79,53 @@
  .tile {
     box-sizing: border-box;
     border: 5px solid var(--text-colour-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
  }
+
+ .header {
+   position: absolute;
+   display: flex;
+   height: 8vh;
+   width: 100%;
+   justify-content: space-between;
+   top: 0;
+   align-items: center;
+   padding-right: 1vw;
+   padding-left: 1vw;
+   box-sizing: border-box;
+ }
+
+ .theme,
+ .back-button {
+   font-family: "silkscreen" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 1.5rem;
+   color: var(--text-colour);
+   background-color: var(--button-colour);
+   border: var(--button-border);
+   flex: 0 0 auto;
+   height: fit-content;
+   padding: 3px; 
+ }
+
+ .back-button {
+   text-decoration: none;
+ }
+
+ .tile:hover:empty:before {
+   content: "";
+   display: block;
+   height: 12vw;
+   width: 12vw;
+   top: -5%;
+   left: -5%;
+   background-image: var(--cross);
+   background-size: contain;
+   background-repeat: no-repeat;
+   opacity: 0.5;
+
+
+ }
+
